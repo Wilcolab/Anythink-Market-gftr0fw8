@@ -25,7 +25,8 @@ jobs:
 
       - uses: oNaiPs/secrets-to-env-action@v1
         with:
-          secrets: ${{ toJSON(secrets) }}
+          secrets: |
+            WILCO_ENGINE_URL: ${{ secrets.WILCO_ENGINE_URL }}
 
       - name: Wilco checks
         id: Wilco
